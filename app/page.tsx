@@ -3,7 +3,7 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import HeaderMenu from '@/components/ui/header-menu';
-import { Twitter, Share2, Trophy } from 'lucide-react';
+import { Twitter } from 'lucide-react';
 import { useTokenData } from '@/hooks/useTokenData';
 
 const DonMemeSite = () => {
@@ -17,7 +17,7 @@ const DonMemeSite = () => {
       {/* Header */}
       <header className="border-b-2 border-black">
         <div className="container mx-auto px-4 py-6 text-center">
-          <div className="text-sm mb-2 font-serif italic">"Every Empire Needs Its Currency"</div>
+          <div className="text-sm mb-2 font-serif italic">&ldquo;Every Empire Needs Its Currency&rdquo;</div>
           <h1 className="text-6xl font-serif font-bold mb-2">$DON</h1>
           <div className="text-lg font-serif">TAKING OVER THE INTERNET COMPUTER</div>
         </div>
@@ -26,7 +26,7 @@ const DonMemeSite = () => {
       {/* Breaking News Banner */}
       <div className="bg-red-800 text-white py-2">
         <div className="container mx-auto px-4 text-center font-serif animate-pulse">
-          ALERT: OTHER BLOCKCHAINS MYSTERIOUSLY "VOLUNTEERING" THEIR MARKET SHARE TO THE DON 
+          ALERT: OTHER BLOCKCHAINS MYSTERIOUSLY &ldquo;VOLUNTEERING&rdquo; THEIR MARKET SHARE TO THE DON 
         </div>
       </div>
 
@@ -40,11 +40,11 @@ const DonMemeSite = () => {
           
           <div className="space-y-6 font-serif text-center max-w-2xl mx-auto">
             <p className="text-xl leading-relaxed italic">
-              "Every family's got an origin story. This one? It starts with The Don..."
+              &ldquo;Every family&apos;s got an origin story. This one? It starts with The Don...&rdquo;
             </p>
             
             <p className="text-lg">
-              While Bitcoin was playing checkers and Ethereum was playing chess, Dominic "The Don" Williams was building an empire called Internet Computer. The kind of empire that makes traditional tech families nervous.
+              While Bitcoin was playing checkers and Ethereum was playing chess, Dominic &ldquo;The Don&rdquo; Williams was building an empire called Internet Computer. The kind of empire that makes traditional tech families nervous.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-4">
@@ -53,7 +53,7 @@ const DonMemeSite = () => {
                 <p className="text-sm">Canisters running smoother than a protection racket</p>
               </div>
               <div className="bg-white p-4 border-2 border-black">
-                <p className="font-bold">The Don's Rules</p>
+                <p className="font-bold">The Don&apos;s Rules</p>
                 <p className="text-sm">No middlemen, no cloud providers, no funny business</p>
               </div>
               <div className="bg-white p-4 border-2 border-black">
@@ -81,7 +81,7 @@ const DonMemeSite = () => {
           <Card className="bg-amber-100 border-2 border-black p-6 text-center font-serif">
             <h3 className="text-xl font-bold mb-2">DAILY BUSINESS</h3>
             <p className="text-3xl font-bold">${volume24h || '0'}</p>
-            <p className="text-sm italic">Today's Action</p>
+            <p className="text-sm italic">Today&apos;s Action</p>
           </Card>
         </div>
 
@@ -91,13 +91,13 @@ const DonMemeSite = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-black bg-opacity-50 p-6">
               <p className="font-serif italic mb-2">
-                "I'm gonna make Web3 an offer it can't refuse: True internet-scale blockchain."
+                &ldquo;I&apos;m gonna make Web3 an offer it can&apos;t refuse: True internet-scale blockchain.&rdquo;
               </p>
               <p className="text-sm">- The Don (probably)</p>
             </div>
             <div className="bg-black bg-opacity-50 p-6">
               <p className="font-serif italic mb-2">
-                "In ICP, we solve problems with canisters, not cannisters."
+                &ldquo;In ICP, we solve problems with canisters, not cannisters.&rdquo;
               </p>
               <p className="text-sm">- The Don (definitely not)</p>
             </div>
@@ -111,7 +111,7 @@ const DonMemeSite = () => {
             <div className="text-center">
               <div className="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">1</div>
               <h3 className="font-serif font-bold mb-2">Get Some ICP</h3>
-              <p className="font-serif">Can't join the family without respect for the Don</p>
+              <p className="font-serif">Can&apos;t join the family without respect for the Don</p>
             </div>
             <div className="text-center">
               <div className="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">2</div>
