@@ -4,8 +4,11 @@ import React from 'react';
 import { Card } from '@/components/ui/card';
 import HeaderMenu from '@/components/ui/header-menu';
 import { Twitter, Share2, Trophy } from 'lucide-react';
+import { useTokenData } from '@/hooks/useTokenData';
 
 const DonMemeSite = () => {
+  const { price, marketCap, volume24h } = useTokenData();
+  
   return (
     <div className="min-h-screen bg-amber-50">
       {/* Header Menu */}
@@ -62,31 +65,23 @@ const DonMemeSite = () => {
         </Card>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <Card className="bg-amber-100 border-2 border-black p-6 text-center font-serif">
-            <h3 className="text-xl font-bold mb-2">MARKET CAP</h3>
-            <p className="text-3xl font-bold">$0</p>
-            <p className="text-sm italic">...for now </p>
+            <h3 className="text-xl font-bold mb-2">STREET PRICE</h3>
+            <p className="text-3xl font-bold">${price || '0.000'}</p>
+            <p className="text-sm italic">The Family Rate</p>
           </Card>
           
           <Card className="bg-amber-100 border-2 border-black p-6 text-center font-serif">
-            <h3 className="text-xl font-bold mb-2">HOLDERS</h3>
-            <p className="text-3xl font-bold">THE FAMILY</p>
-            <p className="text-sm italic">Growing stronger</p>
+            <h3 className="text-xl font-bold mb-2">TERRITORY</h3>
+            <p className="text-3xl font-bold">${marketCap || '0'}</p>
+            <p className="text-sm italic">Growing Every Day</p>
           </Card>
           
           <Card className="bg-amber-100 border-2 border-black p-6 text-center font-serif">
-            <Trophy className="w-8 h-8 mx-auto mb-2" />
-            <h3 className="text-xl font-bold">TOP EARNER</h3>
-            <p className="text-lg">@CryptoCapo</p>
-            <p className="text-sm italic">1,250 RP</p>
-          </Card>
-          
-          <Card className="bg-amber-100 border-2 border-black p-6 text-center font-serif">
-            <Share2 className="w-8 h-8 mx-auto mb-2" />
-            <h3 className="text-xl font-bold">TOTAL MEMES</h3>
-            <p className="text-lg">420</p>
-            <p className="text-sm italic">And counting...</p>
+            <h3 className="text-xl font-bold mb-2">DAILY BUSINESS</h3>
+            <p className="text-3xl font-bold">${volume24h || '0'}</p>
+            <p className="text-sm italic">Today's Action</p>
           </Card>
         </div>
 
