@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
+import HeaderMenu from '@/components/ui/header-menu';
 import { Twitter, Share2, Trophy, Camera, MessageCircle } from 'lucide-react';
 
 const DonMemeSite = () => {
@@ -42,6 +43,9 @@ const DonMemeSite = () => {
 
   return (
     <div className="min-h-screen bg-amber-50">
+      {/* Header Menu */}
+      <HeaderMenu />
+      
       {/* Header */}
       <header className="border-b-2 border-black">
         <div className="container mx-auto px-4 py-6 text-center">
