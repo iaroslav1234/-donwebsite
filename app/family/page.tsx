@@ -5,8 +5,8 @@ import { Card } from '@/components/ui/card';
 import HeaderMenu from '@/components/ui/header-menu';
 import { Star, Shield, Crown, Award, Trophy, Target } from 'lucide-react';
 
-const FamilyRanks = () => {
-  const [selectedRank, setSelectedRank] = useState(null);
+const FamilyPage = () => {
+  const [selectedRank, setSelectedRank] = useState<number | null>(null);
 
   const ranks = [
     {
@@ -80,7 +80,7 @@ const FamilyRanks = () => {
             {ranks.map((rank, index) => (
               <Card 
                 key={index}
-                className={`border-2 border-black cursor-pointer transform transition-all hover:-translate-y-1 ${
+                className={`bg-white border-2 border-black p-4 cursor-pointer transition-all ${
                   selectedRank === index ? 'ring-2 ring-red-800' : ''
                 }`}
                 onClick={() => setSelectedRank(index)}
@@ -160,4 +160,4 @@ const FamilyRanks = () => {
   );
 };
 
-export default FamilyRanks;
+export default FamilyPage;
