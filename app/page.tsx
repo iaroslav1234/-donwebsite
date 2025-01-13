@@ -1,46 +1,11 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Card } from '@/components/ui/card';
 import HeaderMenu from '@/components/ui/header-menu';
-import { Twitter, Share2, Trophy, Camera, MessageCircle } from 'lucide-react';
+import { Twitter, Share2, Trophy } from 'lucide-react';
 
 const DonMemeSite = () => {
-  const [selectedTask, setSelectedTask] = useState(null);
-  
-  const dailyTasks = [
-    {
-      id: 1,
-      title: "Twitter Takedown",
-      description: "Post a $DON meme and tag The Don",
-      reward: "100 Respect Points",
-      difficulty: "Easy",
-      type: "Social",
-      icon: <Twitter className="w-6 h-6" />,
-      completions: 45
-    },
-    {
-      id: 2,
-      title: "Meme Master",
-      description: "Create an ICP mafia movie poster featuring The Don",
-      reward: "250 Respect Points",
-      difficulty: "Medium",
-      type: "Creative",
-      icon: <Camera className="w-6 h-6" />,
-      completions: 12
-    },
-    {
-      id: 3,
-      title: "Family Business",
-      description: "Write a mob-style thread about ICP's technology",
-      reward: "150 Respect Points",
-      difficulty: "Medium",
-      type: "Content",
-      icon: <MessageCircle className="w-6 h-6" />,
-      completions: 28
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-amber-50">
       {/* Header Menu */}
@@ -121,79 +86,6 @@ const DonMemeSite = () => {
             <p className="text-sm italic">And counting...</p>
           </Card>
         </div>
-
-        {/* Daily Tasks Section */}
-        <Card className="mb-8 bg-amber-100 border-2 border-black p-6">
-          <div className="text-center mb-6">
-            <h2 className="text-4xl font-serif font-bold">THE DON'S DAILY TASKS</h2>
-            <p className="text-lg font-serif mt-2">Complete tasks, earn respect, become a made member</p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-4">
-            {dailyTasks.map((task) => (
-              <div
-                key={task.id}
-                className={`bg-white border-2 border-black p-4 cursor-pointer transition-all ${
-                  selectedTask === task.id ? 'ring-2 ring-red-800' : ''
-                }`}
-                onClick={() => setSelectedTask(task.id)}
-              >
-                <div className="flex items-center gap-4">
-                  <div className="bg-black text-white p-3 rounded-full">
-                    {task.icon}
-                  </div>
-                  
-                  <div className="flex-1">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h3 className="font-serif font-bold text-xl">{task.title}</h3>
-                        <p className="font-serif text-gray-600">{task.description}</p>
-                      </div>
-                      <span className="bg-red-800 text-white px-2 py-1 text-sm font-serif">
-                        {task.reward}
-                      </span>
-                    </div>
-                    
-                    <div className="flex items-center gap-4 mt-2">
-                      <span className="text-sm font-serif bg-gray-100 px-2 py-1">
-                        Difficulty: {task.difficulty}
-                      </span>
-                      <span className="text-sm font-serif bg-gray-100 px-2 py-1">
-                        Type: {task.type}
-                      </span>
-                      <span className="text-sm font-serif text-gray-600">
-                        {task.completions} completions today
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                {selectedTask === task.id && (
-                  <div className="mt-4 border-t-2 border-black pt-4">
-                    <div className="bg-amber-50 p-4 font-serif">
-                      <h4 className="font-bold mb-2">How to complete this task:</h4>
-                      <ol className="list-decimal ml-4 space-y-2">
-                        <li>Create your content following the task description</li>
-                        <li>Share it on Twitter with #DONofICP</li>
-                        <li>Submit the link below for verification</li>
-                      </ol>
-                    </div>
-                    <div className="flex gap-4 mt-4">
-                      <input
-                        type="text"
-                        placeholder="Paste your submission link here"
-                        className="flex-1 p-2 border-2 border-black font-serif"
-                      />
-                      <button className="bg-black text-white px-6 py-2 font-bold font-serif hover:bg-gray-900">
-                        SUBMIT
-                      </button>
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </Card>
 
         {/* The Don's Quotes */}
         <Card className="mb-8 bg-red-800 text-white p-8">
