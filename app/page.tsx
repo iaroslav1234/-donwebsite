@@ -37,22 +37,25 @@ const DonMemeSite = () => {
           
           <div className="space-y-6 font-serif text-center max-w-2xl mx-auto">
             <p className="text-xl leading-relaxed italic">
-              "Every blockchain needs its Don. Bitcoin had Satoshi, Ethereum had Vitalik, and ICP? 
-              ICP has Dominic 'The Don' Williams." 
+              "Every family's got an origin story. This one? It starts with The Don..."
             </p>
             
+            <p className="text-lg">
+              While Bitcoin was playing checkers and Ethereum was playing chess, Dominic "The Don" Williams was building an empire called Internet Computer. The kind of empire that makes traditional tech families nervous.
+            </p>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-4">
               <div className="bg-white p-4 border-2 border-black">
-                <p className="font-bold">0% Tax</p>
-                <p className="text-sm">Just like The Don's blockchain fees</p>
+                <p className="font-bold">The Family Business</p>
+                <p className="text-sm">Canisters running smoother than a protection racket</p>
               </div>
               <div className="bg-white p-4 border-2 border-black">
-                <p className="font-bold">No Admin Keys</p>
-                <p className="text-sm">True decentralization, capiche?</p>
+                <p className="font-bold">The Don's Rules</p>
+                <p className="text-sm">No middlemen, no cloud providers, no funny business</p>
               </div>
               <div className="bg-white p-4 border-2 border-black">
-                <p className="font-bold">100% Memes</p>
-                <p className="text-sm">That's how mafia works</p>
+                <p className="font-bold">Pure Business</p>
+                <p className="text-sm">On-chain execution, just as The Don intended</p>
               </div>
             </div>
           </div>
