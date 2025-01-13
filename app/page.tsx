@@ -14,16 +14,16 @@ const DonMemeSite = () => {
       {/* Header */}
       <header className="border-b-2 border-black">
         <div className="container mx-auto px-4 py-6 text-center">
-          <div className="text-sm mb-2 font-serif italic">"In Internet Computer we trust"</div>
+          <div className="text-sm mb-2 font-serif italic">"Every Empire Needs Its Currency"</div>
           <h1 className="text-6xl font-serif font-bold mb-2">$DON</h1>
-          <div className="text-lg font-serif">THE DON OF ICP's OWN MEME TOKEN</div>
+          <div className="text-lg font-serif">TAKING OVER THE INTERNET COMPUTER</div>
         </div>
       </header>
 
       {/* Breaking News Banner */}
       <div className="bg-red-800 text-white py-2">
         <div className="container mx-auto px-4 text-center font-serif animate-pulse">
-          🚨 BREAKING: LOCAL GENIUS SPOTTED MAKING INTERNET COMPUTER AN OFFER IT COULDN'T REFUSE 🚨
+          ALERT: OTHER BLOCKCHAINS MYSTERIOUSLY "VOLUNTEERING" THEIR MARKET SHARE TO THE DON 
         </div>
       </div>
 
@@ -66,7 +66,7 @@ const DonMemeSite = () => {
           <Card className="bg-amber-100 border-2 border-black p-6 text-center font-serif">
             <h3 className="text-xl font-bold mb-2">MARKET CAP</h3>
             <p className="text-3xl font-bold">$0</p>
-            <p className="text-sm italic">...for now 👀</p>
+            <p className="text-sm italic">...for now </p>
           </Card>
           
           <Card className="bg-amber-100 border-2 border-black p-6 text-center font-serif">
