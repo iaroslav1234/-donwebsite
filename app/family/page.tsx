@@ -74,17 +74,11 @@ const FamilyPage = () => {
           className="object-cover object-center opacity-90 sepia"
           priority
         />
-        <div className="absolute bottom-0 left-0 right-0 p-8 text-white bg-gradient-to-t from-black/80">
-          <div className="container mx-auto">
-            <h1 className="text-4xl md:text-6xl font-serif font-bold mb-2">The Family</h1>
-            <p className="text-xl font-serif">Meet the visionaries behind the Internet Computer empire</p>
-          </div>
-        </div>
       </div>
 
       <div className="py-6">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-6">
+          <div className="text-center mb-8">
             <h2 className="text-4xl font-serif font-bold mb-2">FAMILY RANKS</h2>
             <p className="text-lg font-serif">From the streets to the suites - every holder has their place</p>
             <p className="text-md font-serif mt-2 text-gray-600">Current token price: $0.000017</p>
@@ -94,31 +88,33 @@ const FamilyPage = () => {
             {ranks.map((rank, index) => (
               <Card 
                 key={index}
-                className={`bg-white border-2 border-black p-4 cursor-pointer transition-all ${
+                className={`bg-white border-2 border-black p-4 transition-all ${
                   selectedRank === index ? 'ring-2 ring-red-800' : ''
                 }`}
-                onClick={() => setSelectedRank(selectedRank === index ? null : index)}
               >
-                <div className={`${rank.color} text-white p-4 flex items-center justify-between`}>
+                <div 
+                  className={`${rank.color} text-white p-4 flex items-center justify-between cursor-pointer`}
+                  onClick={() => setSelectedRank(selectedRank === index ? null : index)}
+                >
                   <h3 className="text-xl font-serif font-bold">{rank.title}</h3>
                   {rank.icon}
                 </div>
                 
                 <div className="p-4 bg-white space-y-4">
-                  <div>
+                  <div className="cursor-pointer" onClick={() => setSelectedRank(selectedRank === index ? null : index)}>
                     <h4 className="font-serif font-bold mb-2">Required Holdings:</h4>
                     <p className="font-serif">{rank.requirements}</p>
                     <p className="font-serif text-sm text-gray-600">Value: {rank.value}</p>
                   </div>
 
-                  <div>
+                  <div className="cursor-pointer" onClick={() => setSelectedRank(selectedRank === index ? null : index)}>
                     <h4 className="font-serif font-bold mb-2">The Story:</h4>
                     <p className="font-serif text-sm">{rank.description}</p>
                   </div>
                   
-                  <div className="bg-black text-white p-4 mt-4 font-serif">
-                    <p className="text-sm italic mb-2">&ldquo;The Family&apos;s business plans are kept close to the chest...&rdquo;</p>
-                    <p className="text-xs">Benefits for made members coming soon</p>
+                  <div className="bg-black text-white p-4 mt-4 font-serif min-h-[100px] flex flex-col justify-center pointer-events-none select-none">
+                    <p className="text-sm italic mb-2 text-center">&ldquo;The Family&apos;s business plans are kept close to the chest...&rdquo;</p>
+                    <p className="text-xs text-center">Benefits for made members coming soon</p>
                   </div>
 
                   {selectedRank === index && (
