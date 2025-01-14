@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import HeaderMenu from '@/components/ui/header-menu';
 import { Star, Shield, Crown, Award, Trophy, Target } from 'lucide-react';
+import Image from 'next/image';
 
 const FamilyPage = () => {
   const [selectedRank, setSelectedRank] = useState<number | null>(null);
@@ -66,10 +67,12 @@ const FamilyPage = () => {
       {/* Hero Banner */}
       <div className="w-full h-64 md:h-96 relative mb-12 overflow-hidden">
         <div className="absolute inset-0 bg-black/50"></div>
-        <img 
+        <Image 
           src="/family-banner.jpeg" 
           alt="The Don and his associates" 
-          className="w-full h-full object-cover object-center opacity-90 sepia"
+          fill
+          className="object-cover object-center opacity-90 sepia"
+          priority
         />
         <div className="absolute bottom-0 left-0 right-0 p-8 text-white bg-gradient-to-t from-black/80">
           <div className="container mx-auto">
