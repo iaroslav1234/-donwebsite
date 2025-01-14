@@ -62,6 +62,23 @@ const FamilyPage = () => {
   return (
     <div className="min-h-screen bg-amber-50">
       <HeaderMenu />
+      
+      {/* Hero Banner */}
+      <div className="w-full h-64 md:h-96 relative mb-12 overflow-hidden">
+        <div className="absolute inset-0 bg-black/50"></div>
+        <img 
+          src="/family-banner.jpeg" 
+          alt="The Don and his associates" 
+          className="w-full h-full object-cover object-center opacity-90 sepia"
+        />
+        <div className="absolute bottom-0 left-0 right-0 p-8 text-white bg-gradient-to-t from-black/80">
+          <div className="container mx-auto">
+            <h1 className="text-4xl md:text-6xl font-serif font-bold mb-2">The Family</h1>
+            <p className="text-xl font-serif">Meet the visionaries behind the Internet Computer empire</p>
+          </div>
+        </div>
+      </div>
+
       <div className="py-8">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">

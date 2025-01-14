@@ -109,6 +109,21 @@ const DonMemeSite = () => {
           </Card>
         </div>
 
+        {/* First Video Section */}
+        <div className="mb-8">
+          <Card className="bg-amber-100 border-2 border-black p-6">
+            <h2 className="text-2xl font-serif font-bold text-center mb-6">WHEN DONS COLLIDE</h2>
+            <div className="relative aspect-video rounded-lg overflow-hidden">
+              <video
+                controls
+                className="w-full h-full object-contain bg-black"
+              >
+                <source src="/don-message.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </Card>
+        </div>
+
         {/* The Don's Quotes */}
         <Card className="mb-8 bg-red-800 text-white p-8">
           <h2 className="text-3xl font-serif font-bold mb-6 text-center">WORDS OF WISDOM</h2>
@@ -127,6 +142,22 @@ const DonMemeSite = () => {
             </div>
           </div>
         </Card>
+
+        {/* Second Video Section */}
+        <div className="mb-12">
+          <Card className="bg-red-800 text-white p-6">
+            <h2 className="text-2xl font-serif font-bold text-center mb-6">A MESSAGE FROM THE DON</h2>
+            <div className="relative aspect-video rounded-lg overflow-hidden">
+              <video
+                controls
+                className="w-full h-full object-contain bg-black"
+              >
+                <source src="/other-done-message.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <p className="text-center mt-4 font-serif italic">&ldquo;Join the family, or sleep with the fish.&rdquo;</p>
+          </Card>
+        </div>
 
         {/* Join the Family */}
         <Card className="bg-amber-100 border-2 border-black p-6 mb-8">
