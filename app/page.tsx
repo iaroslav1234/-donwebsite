@@ -16,7 +16,7 @@ const DonMemeSite = () => {
       
       {/* Header */}
       <header className="border-b-2 border-black">
-        <div className="container mx-auto px-4 py-6 text-center">
+        <div className="container mx-auto px-4 max-w-4xl py-6 text-center">
           <div className="text-sm mb-2 font-serif italic">&ldquo;Every Empire Needs Its Currency&rdquo;</div>
           <h1 className="text-6xl font-serif font-bold mb-2">$DON</h1>
           <div className="text-lg font-serif">TAKING OVER THE INTERNET COMPUTER</div>
@@ -25,15 +25,15 @@ const DonMemeSite = () => {
 
       {/* Breaking News Banner */}
       <div className="bg-red-800 text-white py-2">
-        <div className="container mx-auto px-4 text-center font-serif animate-pulse">
+        <div className="container mx-auto px-4 max-w-4xl text-center font-serif animate-pulse">
           ALERT: OTHER BLOCKCHAINS MYSTERIOUSLY &ldquo;VOLUNTEERING&rdquo; THEIR MARKET SHARE TO THE DON 
         </div>
       </div>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 max-w-4xl py-6">
         {/* Hero Section */}
-        <Card className="mb-8 bg-amber-100 border-2 border-black p-6">
+        <Card className="mb-6 bg-amber-100 border-2 border-black p-6">
           <div className="text-center mb-6">
             <span className="bg-black text-white px-4 py-1 font-serif">THE STORY</span>
           </div>
@@ -65,7 +65,7 @@ const DonMemeSite = () => {
         </Card>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
           <Card className="bg-amber-100 border-2 border-black p-6 text-center font-serif">
             <h3 className="text-xl font-bold mb-2">STREET PRICE</h3>
             <p className="text-3xl font-bold">
@@ -110,10 +110,10 @@ const DonMemeSite = () => {
         </div>
 
         {/* First Video Section */}
-        <div className="mb-8">
+        <div className="mb-6">
           <Card className="bg-amber-100 border-2 border-black p-6">
             <h2 className="text-2xl font-serif font-bold text-center mb-6">WHEN DONS COLLIDE</h2>
-            <div className="relative aspect-video rounded-lg overflow-hidden">
+            <div className="relative aspect-video md:w-4/5 mx-auto rounded-lg overflow-hidden">
               <video
                 controls
                 className="w-full h-full object-contain bg-black"
@@ -121,13 +121,14 @@ const DonMemeSite = () => {
                 <source src="/don-message.mp4" type="video/mp4" />
               </video>
             </div>
+            <p className="text-center mt-4 font-serif italic">&ldquo;Let&apos;s make Internet Computer great again!&rdquo;</p>
           </Card>
         </div>
 
         {/* The Don's Quotes */}
-        <Card className="mb-8 bg-red-800 text-white p-8">
+        <Card className="mb-6 bg-red-800 text-white p-6">
           <h2 className="text-3xl font-serif font-bold mb-6 text-center">WORDS OF WISDOM</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <div className="bg-black bg-opacity-50 p-6">
               <p className="font-serif italic mb-2">
                 &ldquo;I&apos;m gonna make Web3 an offer it can&apos;t refuse: True internet-scale blockchain.&rdquo;
@@ -144,10 +145,10 @@ const DonMemeSite = () => {
         </Card>
 
         {/* Second Video Section */}
-        <div className="mb-12">
+        <div className="mb-8">
           <Card className="bg-red-800 text-white p-6">
             <h2 className="text-2xl font-serif font-bold text-center mb-6">A MESSAGE FROM THE DON</h2>
-            <div className="relative aspect-video rounded-lg overflow-hidden">
+            <div className="relative aspect-video md:w-4/5 mx-auto rounded-lg overflow-hidden">
               <video
                 controls
                 className="w-full h-full object-contain bg-black"
@@ -160,9 +161,9 @@ const DonMemeSite = () => {
         </div>
 
         {/* Join the Family */}
-        <Card className="bg-amber-100 border-2 border-black p-6 mb-8">
+        <Card className="bg-amber-100 border-2 border-black p-6 mb-6">
           <h2 className="text-3xl font-serif font-bold mb-6 text-center">JOIN THE FAMILY</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             <div className="text-center">
               <div className="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">1</div>
               <h3 className="font-serif font-bold mb-2">Get Some ICP</h3>
@@ -172,6 +173,14 @@ const DonMemeSite = () => {
               <div className="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">2</div>
               <h3 className="font-serif font-bold mb-2">Swap for $DON</h3>
               <p className="font-serif">Make the exchange, become a made man</p>
+              <a 
+                href="https://app.icpswap.com/swap?input=ryjl3-tyaaa-aaaaa-aaaba-cai&output=mgskz-6iaaa-aaaam-qcxaa-cai" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="mt-4 inline-block bg-red-800 text-white px-6 py-2 font-serif hover:bg-red-900 transition-colors"
+              >
+                SWAP NOW
+              </a>
             </div>
             <div className="text-center">
               <div className="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">3</div>

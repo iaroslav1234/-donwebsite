@@ -65,7 +65,7 @@ const FamilyPage = () => {
       <HeaderMenu />
       
       {/* Hero Banner */}
-      <div className="w-full h-64 md:h-96 relative mb-12 overflow-hidden">
+      <div className="w-full h-64 md:h-96 relative mb-8 overflow-hidden">
         <div className="absolute inset-0 bg-black/50"></div>
         <Image 
           src="/family-banner.jpeg" 
@@ -82,22 +82,22 @@ const FamilyPage = () => {
         </div>
       </div>
 
-      <div className="py-8">
+      <div className="py-6">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
+          <div className="text-center mb-6">
             <h2 className="text-4xl font-serif font-bold mb-2">FAMILY RANKS</h2>
             <p className="text-lg font-serif">From the streets to the suites - every holder has their place</p>
             <p className="text-md font-serif mt-2 text-gray-600">Current token price: $0.000017</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {ranks.map((rank, index) => (
               <Card 
                 key={index}
                 className={`bg-white border-2 border-black p-4 cursor-pointer transition-all ${
                   selectedRank === index ? 'ring-2 ring-red-800' : ''
                 }`}
-                onClick={() => setSelectedRank(index)}
+                onClick={() => setSelectedRank(selectedRank === index ? null : index)}
               >
                 <div className={`${rank.color} text-white p-4 flex items-center justify-between`}>
                   <h3 className="text-xl font-serif font-bold">{rank.title}</h3>
