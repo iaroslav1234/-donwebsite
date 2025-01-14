@@ -7,7 +7,7 @@ import { Twitter } from 'lucide-react';
 import { useTokenData } from '@/hooks/useTokenData';
 
 const DonMemeSite = () => {
-  const { price, marketCap, volume24h } = useTokenData();
+  const tokenData = useTokenData();
   
   return (
     <div className="min-h-screen bg-amber-50">
@@ -68,19 +68,43 @@ const DonMemeSite = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <Card className="bg-amber-100 border-2 border-black p-6 text-center font-serif">
             <h3 className="text-xl font-bold mb-2">STREET PRICE</h3>
-            <p className="text-3xl font-bold">${price || '0.000'}</p>
+            <p className="text-3xl font-bold">
+              {tokenData.isLoading ? (
+                <span className="animate-pulse">Loading...</span>
+              ) : tokenData.error ? (
+                <span className="text-red-600">--</span>
+              ) : (
+                `$${tokenData.price}`
+              )}
+            </p>
             <p className="text-sm italic">The Family Rate</p>
           </Card>
           
           <Card className="bg-amber-100 border-2 border-black p-6 text-center font-serif">
             <h3 className="text-xl font-bold mb-2">TERRITORY</h3>
-            <p className="text-3xl font-bold">${marketCap || '0'}</p>
+            <p className="text-3xl font-bold">
+              {tokenData.isLoading ? (
+                <span className="animate-pulse">Loading...</span>
+              ) : tokenData.error ? (
+                <span className="text-red-600">--</span>
+              ) : (
+                `$${tokenData.marketCap}`
+              )}
+            </p>
             <p className="text-sm italic">Growing Every Day</p>
           </Card>
           
           <Card className="bg-amber-100 border-2 border-black p-6 text-center font-serif">
             <h3 className="text-xl font-bold mb-2">DAILY BUSINESS</h3>
-            <p className="text-3xl font-bold">${volume24h || '0'}</p>
+            <p className="text-3xl font-bold">
+              {tokenData.isLoading ? (
+                <span className="animate-pulse">Loading...</span>
+              ) : tokenData.error ? (
+                <span className="text-red-600">--</span>
+              ) : (
+                `$${tokenData.volume24h}`
+              )}
+            </p>
             <p className="text-sm italic">Today&apos;s Action</p>
           </Card>
         </div>
@@ -130,12 +154,22 @@ const DonMemeSite = () => {
         <div className="text-center">
           <h2 className="text-2xl font-serif font-bold mb-6">THE SOCIAL CLUB</h2>
           <div className="flex justify-center space-x-4">
-            <button className="bg-black text-white px-6 py-3 font-serif flex items-center gap-2">
+            <a 
+              href="https://x.com/thedonicp" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="bg-black text-white px-6 py-3 font-serif flex items-center gap-2 hover:bg-gray-800"
+            >
               <Twitter className="w-4 h-4" /> TWITTER
-            </button>
-            <button className="bg-red-800 text-white px-6 py-3 font-serif">
+            </a>
+            <a 
+              href="https://t.me/DomistheDON" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="bg-red-800 text-white px-6 py-3 font-serif hover:bg-red-900"
+            >
               TELEGRAM
-            </button>
+            </a>
           </div>
         </div>
       </main>
