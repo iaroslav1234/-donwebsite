@@ -97,7 +97,7 @@ const FamilyPage = () => {
                   </div>
                   
                   <div className="bg-black text-white p-4 mt-4 font-serif">
-                    <p className="text-sm italic mb-2">"The Family's business plans are kept close to the chest..."</p>
+                    <p className="text-sm italic mb-2">&ldquo;The Family&apos;s business plans are kept close to the chest...&rdquo;</p>
                     <p className="text-xs">Benefits for made members coming soon</p>
                   </div>
 
