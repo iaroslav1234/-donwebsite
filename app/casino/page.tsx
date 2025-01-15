@@ -29,7 +29,6 @@ const CasinoPage = () => {
   const [time, setTime] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [firstCard, setFirstCard] = useState<number | null>(null);
-  const [secondCard, setSecondCard] = useState<number | null>(null);
   const [isChecking, setIsChecking] = useState(false);
   const [gameWon, setGameWon] = useState(false);
 
@@ -63,7 +62,6 @@ const CasinoPage = () => {
     setTime(0);
     setIsPlaying(true);
     setFirstCard(null);
-    setSecondCard(null);
     setGameWon(false);
   };
 
@@ -77,7 +75,6 @@ const CasinoPage = () => {
     if (firstCard === null) {
       setFirstCard(id);
     } else {
-      setSecondCard(id);
       setIsChecking(true);
       setMoves((prev) => prev + 1);
 
@@ -99,7 +96,6 @@ const CasinoPage = () => {
         }
         setCards(newCards);
         setFirstCard(null);
-        setSecondCard(null);
         setIsChecking(false);
       }, 1000);
     }

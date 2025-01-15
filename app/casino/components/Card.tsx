@@ -4,14 +4,13 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 interface CardProps {
-  id: number;
   icon: string;
   isFlipped: boolean;
   isMatched: boolean;
   onClick: () => void;
 }
 
-const Card = ({ id, icon, isFlipped, isMatched, onClick }: CardProps) => {
+const Card = ({ icon, isFlipped, isMatched, onClick }: CardProps) => {
   return (
     <div
       className={`relative w-full aspect-[3/4] cursor-pointer ${

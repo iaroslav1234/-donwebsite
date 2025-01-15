@@ -3,7 +3,6 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import HeaderMenu from '@/components/ui/header-menu';
-import { Twitter } from 'lucide-react';
 import { useTokenData } from '@/hooks/useTokenData';
 
 const DonMemeSite = () => {
