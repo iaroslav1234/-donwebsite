@@ -10,6 +10,10 @@ const HeaderMenu = () => {
     {
       title: 'The Family',
       href: '/family'
+    },
+    {
+      title: 'Casino',
+      href: '/casino'
     }
   ];
 

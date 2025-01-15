@@ -117,6 +117,7 @@ const DonMemeSite = () => {
               <video
                 controls
                 className="w-full h-full object-contain bg-black"
+                poster="/donscollide.png"
               >
                 <source src="/don-message.mp4" type="video/mp4" />
               </video>
@@ -152,6 +153,7 @@ const DonMemeSite = () => {
               <video
                 controls
                 className="w-full h-full object-contain bg-black"
+                poster="/thedon.png"
               >
                 <source src="/other-done-message.mp4" type="video/mp4" />
               </video>
@@ -198,15 +200,15 @@ const DonMemeSite = () => {
               href="https://x.com/thedonicp" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="bg-black text-white px-6 py-3 font-serif flex items-center gap-2 hover:bg-gray-800"
+              className="bg-black text-white px-6 py-3 font-serif hover:bg-gray-800 w-32 text-center"
             >
-              <Twitter className="w-4 h-4" /> TWITTER
+              X
             </a>
             <a 
               href="https://t.me/DomistheDON" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="bg-red-800 text-white px-6 py-3 font-serif hover:bg-red-900"
+              className="bg-red-800 text-white px-6 py-3 font-serif hover:bg-red-900 w-32 text-center"
             >
               TELEGRAM
             </a>
