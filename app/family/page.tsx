@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import HeaderMenu from '@/components/ui/header-menu';
 import { Star, Shield, Crown, Award, Trophy, Target } from 'lucide-react';
@@ -16,7 +16,7 @@ const FamilyPage = () => {
       title: "Street Runner",
       icon: <Shield className="w-8 h-8" />,
       requirements: "10,000 - 100,000 $DON",
-      value: tokenData.price ? `$${(tokenData.price * 10000).toFixed(2)} - $${(tokenData.price * 100000).toFixed(2)}` : "Loading...",
+      value: tokenData.price ? `$${(parseFloat(tokenData.price) * 10000).toFixed(2)} - $${(parseFloat(tokenData.price) * 100000).toFixed(2)}` : "Loading...",
       description: "Every family starts somewhere. Street Runners are the up-and-comers, the hustlers, the ones who see the vision early. You might be small time now, but hey - even The Don started as a Street Runner.",
       color: "bg-gray-800"
     },
@@ -24,7 +24,7 @@ const FamilyPage = () => {
       title: "Associate",
       icon: <Target className="w-8 h-8" />,
       requirements: "100,000 - 1,000,000 $DON",
-      value: tokenData.price ? `$${(tokenData.price * 100000).toFixed(2)} - $${(tokenData.price * 1000000).toFixed(2)}` : "Loading...",
+      value: tokenData.price ? `$${(parseFloat(tokenData.price) * 100000).toFixed(2)} - $${(parseFloat(tokenData.price) * 1000000).toFixed(2)}` : "Loading...",
       description: "Now we're talking. Associates have proven their loyalty to the family. Not yet made men, but respected enough to get a seat at the social club. The kind of holder who understands that in ICP we trust.",
       color: "bg-blue-800"
     },
@@ -32,7 +32,7 @@ const FamilyPage = () => {
       title: "Soldier",
       icon: <Award className="w-8 h-8" />,
       requirements: "1M - 10M $DON",
-      value: tokenData.price ? `$${(tokenData.price * 1000000).toFixed(2)} - $${(tokenData.price * 10000000).toFixed(2)}` : "Loading...",
+      value: tokenData.price ? `$${(parseFloat(tokenData.price) * 1000000).toFixed(2)} - $${(parseFloat(tokenData.price) * 10000000).toFixed(2)}` : "Loading...",
       description: "A made member of the family. Soldiers are the backbone of our operation. When The Don needs something done on the blockchain, these are the guys who make it happen. True believers in the Internet Computer revolution.",
       color: "bg-green-800"
     },
@@ -40,7 +40,7 @@ const FamilyPage = () => {
       title: "Capo",
       icon: <Star className="w-8 h-8" />,
       requirements: "10M - 50M $DON",
-      value: tokenData.price ? `$${(tokenData.price * 10000000).toFixed(2)} - $${(tokenData.price * 50000000).toFixed(2)}` : "Loading...",
+      value: tokenData.price ? `$${(parseFloat(tokenData.price) * 10000000).toFixed(2)} - $${(parseFloat(tokenData.price) * 50000000).toFixed(2)}` : "Loading...",
       description: "Capos are the heavy hitters. The kind of holders who don't just follow The Don's vision - they help shape it. When a Capo talks Internet Computer, even Bitcoin maxis listen... not that they'd admit it.",
       color: "bg-purple-800"
     },
@@ -48,7 +48,7 @@ const FamilyPage = () => {
       title: "Underboss",
       icon: <Trophy className="w-8 h-8" />,
       requirements: "50M - 100M $DON",
-      value: tokenData.price ? `$${(tokenData.price * 50000000).toFixed(2)} - $${(tokenData.price * 100000000).toFixed(2)}` : "Loading...",
+      value: tokenData.price ? `$${(parseFloat(tokenData.price) * 50000000).toFixed(2)} - $${(parseFloat(tokenData.price) * 100000000).toFixed(2)}` : "Loading...",
       description: "The elite of our family. These are the types who don't just hold bags - they hold influence. When an Underboss makes a move in the ICP ecosystem, the whole blockchain feels it. Second only to The Don himself.",
       color: "bg-red-800"
     },
@@ -56,7 +56,7 @@ const FamilyPage = () => {
       title: "The Don",
       icon: <Crown className="w-8 h-8" />,
       requirements: "100M+ $DON",
-      value: tokenData.price ? `$${(tokenData.price * 100000000).toFixed(2)}+` : "Loading...",
+      value: tokenData.price ? `$${(parseFloat(tokenData.price) * 100000000).toFixed(2)}+` : "Loading...",
       description: "The highest honor in our family. These legends hold bags so heavy, they make Bitcoin whales look like guppies. When they speak about Internet Computer, it's not just talk - it's gospel. The true believers, the visionaries, the ones who saw what ICP could become.",
       color: "bg-amber-800"
     }
@@ -84,7 +84,7 @@ const FamilyPage = () => {
             <h2 className="text-4xl font-serif font-bold mb-2">FAMILY RANKS</h2>
             <p className="text-lg font-serif">From the streets to the suites - every holder has their place</p>
             <p className="text-md font-serif mt-2 text-gray-600">
-              Current token price: ${tokenData.price ? tokenData.price.toFixed(6) : "Loading..."}
+              Current token price: ${tokenData.price ? parseFloat(tokenData.price).toFixed(6) : "Loading..."}
             </p>
           </div>
 
